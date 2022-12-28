@@ -3,12 +3,32 @@ import { HeaderContainer } from "./styles";
 
 import logo from "../../assets/svg/logo.svg";
 import LinkButton from "../LinkButton";
+import { useLayoutEffect, useState } from "react";
 
 export default function Header() {
 
+	const [pageScrollPositionY, setPageScrollPositionY] = useState(0);
+
+	function getPageYAfterScroll() {
+		setPageScrollPositionY(window.scrollY);
+	}
+
+	useLayoutEffect(() => {
+		const width = window.innerWidth;
+
+		if (width >= 1000) {
+			window.addEventListener("scroll", getPageYAfterScroll);
+		}
+
+		return () => window.removeEventListener("scroll", getPageYAfterScroll);
+
+	}, []);
+	
 
 	return (
-		<HeaderContainer>
+		<HeaderContainer
+			className={pageScrollPositionY >= 100 ? "collapse-menu" : ""}
+		>
 			<div className="flex">
 				<Link to={"/"}>
 					<img src={logo} alt="Logo Shortly" />

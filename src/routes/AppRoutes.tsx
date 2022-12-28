@@ -6,10 +6,12 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Pricing from "../pages/Pricing";
 import NotFound404 from "../pages/NotFound404";
+import ScrollToTop from "../components/ScrollToTop";
 
 const AppRoutes = () => {
 	return (
 		<BrowserRouter>
+			<ScrollToTop />
 			<Header />
 
 			<Routes>

@@ -15,6 +15,7 @@ export const FooterContainer = styled.footer`
 		
 		.logo-footer {
 			#logo {
+				pointer-events: none;
 				height: 50px;
 			}
 		}
@@ -35,6 +36,7 @@ export const FooterContainer = styled.footer`
 			display: flex;
 			flex-direction: column;
 			gap: .6rem;
+			list-style: none;
 
 			li a {
 				font-size: .9rem;

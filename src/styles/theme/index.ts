@@ -1,8 +1,10 @@
 export default {
 	background: "#fff",
+	backgroundLight: "#EFF1F7",
 	colors: {
 		primary: {
 			colorLight: "#2acfcf",
+			colorLightHover: "#98E4DF",
 			colorDark: "#3b3054",
 		},
 		white: "#FFF",

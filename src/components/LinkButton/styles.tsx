@@ -9,12 +9,13 @@ export const LinkCustom = styled(Link) <ILink>`
 	background-color: ${({ theme }) => theme.colors.primary.colorLight};
 	color: ${({ theme }) => theme.colors.white};
 	font-size: ${({ fontSize }) => fontSize};
-	padding: .5rem 1.6rem;
+	padding: .625rem 1.6rem;
 	border-radius: 100px;
 	font-weight: 700;
-	transition: opacity .3s ease-in-out;	
+	transition: background .3s ease-in-out;
+	width: fit-content;
 
 	&:hover {
-		opacity: .6;
+		background: ${({ theme }) => theme.colors.primary.colorLightHover};
 	}
 `;

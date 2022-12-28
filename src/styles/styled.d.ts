@@ -3,10 +3,12 @@ import "styled-components";
 declare module "styled-components" {
 	export interface DefaultTheme {
 		background: string,
+		backgroundLight: string,
 		colors: {
 			primary: {
 				colorLight: string,
 				colorDark: string,
+				colorLightHover: string,
 			},
 			white: string,
 			secondary: string,
