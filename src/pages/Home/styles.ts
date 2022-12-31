@@ -60,7 +60,7 @@ export const ControlBanner = styled.div`
 export const SectionShorter = styled.section`
 	position: relative;
 	width: 100%;
-	height: 200px;
+	height: 100%;
 	background-color: ${({ theme }) => theme.backgroundLight};
 
 	.container-form {
@@ -73,6 +73,15 @@ export const SectionShorter = styled.section`
 		background-repeat: no-repeat;
 		margin: 0 auto;
 		border-radius: .625rem;
+	}
+
+	ul {
+		width: 80%;
+		list-style: none;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 1rem;
 	}
 `;
 

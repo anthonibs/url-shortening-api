@@ -3,13 +3,18 @@ import schema from "../../schema/Yup";
 import { Field, Form, Formik } from "formik";
 import { Button } from "../Button";
 import { Container, FieldsetCustom } from "./styles";
-
+import Spinner from "../Spinner";
 
 interface FormValues {
 	shorterLink: string;
 }
 
-export default function FormShorterLinks() {
+interface IFormShorterLinksProps {
+	handleOnSubmit: (url: string) => void;
+	isLoading: boolean;
+}
+
+export default function FormShorterLinks({ handleOnSubmit, isLoading }: IFormShorterLinksProps) {
 
 	const initialValues: FormValues = {
 		shorterLink: "",
@@ -22,7 +27,7 @@ export default function FormShorterLinks() {
 				validationSchema={schema}
 				onSubmit={(values, actions) => {
 					console.log("Enviar: ", { values, actions });
-					actions.setSubmitting(false);
+					handleOnSubmit(values.shorterLink);
 				}}
 			>
 				{({ errors, touched, isValid }) => (
@@ -30,7 +35,7 @@ export default function FormShorterLinks() {
 						<FieldsetCustom>
 							<Field
 								id="shorter-links"
-								type="url"
+								type="text"
 								name="shorterLink"
 								placeholder="Shorter a link here..."
 							/>
@@ -42,6 +47,7 @@ export default function FormShorterLinks() {
 
 
 						<Button type="submit" disabled={!isValid}>
+							{isLoading && <Spinner width={"20px"} height={"20px"} />}
 							Shorten It!
 						</Button>
 					</Form>

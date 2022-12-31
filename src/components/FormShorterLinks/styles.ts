@@ -1,40 +1,51 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-	display: flex;
 	align-items: center;
+	display: flex;
 	height: 140px;
 	
 	form {
 		display: flex;
+		gap: 1rem;
 		margin: 0 auto;
 		width: 90%;
-		gap: 1rem;
+
+		button {
+			align-items: center;
+			display: flex;
+			position: relative;
+
+			span {
+				left: 6px;
+				position: absolute;
+			}
+		}
 	}
 `;
 
 
 export const FieldsetCustom = styled.fieldset`
+	border: none;
 	position: relative;
 	width: 100%;
-	border: none;
 
 	input {
-		height: 45px;
-		width: 100%;
 		border-radius: .325rem;
-		padding: .325rem 1.6rem;
-		color: ${({ theme }) => theme.colors.neutral.gray};
 		border: 2px solid transparent;
-		outline: none;
+		color: ${({ theme }) => theme.colors.neutral.gray};
 		font-size: 16px;
+		height: 45px;
+		outline: none;
+		padding: .325rem 1.6rem;
+		width: 100%;
 	}
 
 	#error {
-		position: absolute;
-		left: 0;
 		bottom: -1.525rem;
 		color: ${({ theme }) => theme.colors.secondary};
+		left: 0;
+		position: absolute;
 		width: fit-content;
 	}
 `;
