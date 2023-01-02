@@ -20,4 +20,19 @@ body {
 	background: ${props => props.theme.background};
 	font-size: 18px;
 }
+
+
+body::-webkit-scrollbar {
+	width: 8px;
+	scroll-behavior: smooth;
+}	
+
+body::-webkit-scrollbar-track {
+	background: ${({ theme }) => theme.colors.neutral.gray};
+}
+
+body::-webkit-scrollbar-thumb {
+	background: ${({ theme }) => theme.colors.primary.colorLight};
+	border-radius: 4px;
+}
 `;

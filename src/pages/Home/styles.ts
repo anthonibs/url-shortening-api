@@ -77,11 +77,30 @@ export const SectionShorter = styled.section`
 
 	ul {
 		width: 80%;
+		height: 100%;
+		max-height: 480px;
 		list-style: none;
 		margin: 0 auto;
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
 		gap: 1rem;
+		overflow-y: auto;
+		padding: 0 .625rem .325rem 0;
+
+		&::-webkit-scrollbar {
+			width: 6px;
+			scroll-behavior: smooth;
+		}	
+
+		&::-webkit-scrollbar-track {
+			background: ${({theme}) => theme.colors.neutral.gray};
+			border-radius: 3px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: ${({theme}) => theme.colors.primary.colorLight};
+			border-radius: 3px;
+		}
 	}
 `;
 

@@ -41,11 +41,20 @@ export const FieldsetCustom = styled.fieldset`
 		width: 100%;
 	}
 
-	#error {
+	.error {
 		bottom: -1.525rem;
 		color: ${({ theme }) => theme.colors.secondary};
 		left: 0;
 		position: absolute;
 		width: fit-content;
+	}
+
+	.error-border {
+		border: 2px solid ${({ theme }) => theme.colors.secondary};
+		color: ${({ theme }) => theme.colors.secondary};
+		
+		&::placeholder {
+			color: ${({ theme }) => theme.colors.secondary};
+		}
 	}
 `;

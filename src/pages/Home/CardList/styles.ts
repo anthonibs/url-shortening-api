@@ -33,7 +33,7 @@ export const CardListContainer = styled.article<ICardListProps>`
 		/* Reset do Component Button */
 		button {
 			background-color: ${(props) => props.isCopied ? props.theme.colors.primary.colorDark : ""};
-			height: 100%;
+			height: 35px;
 			margin-left: 1rem;
 			padding: 0;
 			position: relative;

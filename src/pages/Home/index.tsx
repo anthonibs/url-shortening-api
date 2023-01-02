@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 // Interfaces
 import IShorterProps from "../../shared/interfaces/shorter";
 
 // Components
 import Card from "../../components/Card";
+import CardList from "./CardList";
 import FormShorterLinks from "../../components/FormShorterLinks";
 import LinkButton from "../../components/LinkButton";
-import CardList from "./CardList";
 
 
 // Styles
@@ -22,9 +22,16 @@ const baseURL = "https://api.shrtco.de/v2/";
 export default function Home() {
 
 	const [isLoading, setIsLoading] = useState<boolean>(false);
-	const [listShorter, setListShorter] = useState<IShorterProps[]>([]);
+	const [listShorter, setListShorter] = useState<IShorterProps[]>(() => {
+		const shortLinksList = localStorage.getItem("@shortening-app:list");
+		if (shortLinksList === null) {
+			return [];
+		} else {
+			return JSON.parse(shortLinksList);
+		}
+	});
 
-
+	
 	function handleOnSubmit(url: string) {
 		try {
 			setIsLoading(true);
@@ -35,6 +42,7 @@ export default function Home() {
 				if (response.ok) {
 					setIsLoading(false);
 					setListShorter(prev => [...prev, data.result]);
+					localStorage.setItem("@shortening-app:list", JSON.stringify([...listShorter, data.result]));
 				}
 
 				if (response.status === 400) {
@@ -54,7 +62,9 @@ export default function Home() {
 		}
 	}
 
-
+	useLayoutEffect(() => {
+		listShorter;
+	}, [listShorter]);
 
 	return (
 		<>
@@ -90,16 +100,20 @@ export default function Home() {
 				<div className="container-form">
 					<FormShorterLinks handleOnSubmit={handleOnSubmit} isLoading={isLoading} />
 				</div>
-				<ul>
-					{listShorter && listShorter.map((item, indice) => (
-						<li key={indice}>
-							<CardList
-								urlOriginal={item.original_link}
-								shorter={item.short_link}
-							/>
-						</li>
-					))}
-				</ul>
+				{
+					listShorter.length !== 0
+						? <ul>
+							{listShorter.map((item, index) => (
+								<li key={index}>
+									<CardList
+										urlOriginal={item.original_link}
+										shorter={item.short_link}
+									/>
+								</li>
+							))}
+						</ul>
+						: ""
+				}
 			</SectionShorter>
 
 			<SectionCustom>
