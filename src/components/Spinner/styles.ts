@@ -11,8 +11,8 @@ const rotation = keyframes`
 
 
 interface ILoaderContainerProps {
-	width: string;
 	height: string
+	width: string;
 }
 
 export const LoaderContainer = styled.span<ILoaderContainerProps>`

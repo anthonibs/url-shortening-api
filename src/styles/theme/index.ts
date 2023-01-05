@@ -1,6 +1,7 @@
 export default {
 	background: "#fff",
 	backgroundLight: "#EFF1F7",
+	backgroundHeader: "rgba(255, 255, 255, .7)",
 	colors: {
 		primary: {
 			colorLight: "#2acfcf",

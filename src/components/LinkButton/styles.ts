@@ -5,7 +5,7 @@ interface ILink {
 	fontSize?: string;
 }
 
-export const LinkCustom = styled(Link) <ILink>`
+export const LinkCustom = styled(Link)<ILink>`
 	background-color: ${({ theme }) => theme.colors.primary.colorLight};
 	color: ${({ theme }) => theme.colors.white};
 	font-size: ${({ fontSize }) => fontSize};

@@ -1,7 +1,9 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
 
 // Interfaces
 import IShorterProps from "../../shared/interfaces/shorter";
+
 
 // Components
 import Card from "../../components/Card";
@@ -11,17 +13,25 @@ import LinkButton from "../../components/LinkButton";
 
 
 // Styles
-import { Banner, BannerFooter, ControlBanner, SectionCustom, SectionShorter } from "./styles";
+import {
+	Banner,
+	BannerFooter,
+	ControlBanner,
+	SectionCustom,
+	SectionShorter
+} from "./styles";
+
 
 //Json file with the information inside the cards
 import db from "./db.json";
 
-const baseURL = "https://api.shrtco.de/v2/";
 
+const baseURL = "https://api.shrtco.de/v2/";
 
 export default function Home() {
 
 	const [isLoading, setIsLoading] = useState<boolean>(false);
+
 	const [listShorter, setListShorter] = useState<IShorterProps[]>(() => {
 		const shortLinksList = localStorage.getItem("@shortening-app:list");
 		if (shortLinksList === null) {
@@ -31,7 +41,7 @@ export default function Home() {
 		}
 	});
 
-	
+
 	function handleOnSubmit(url: string) {
 		try {
 			setIsLoading(true);
@@ -62,7 +72,7 @@ export default function Home() {
 		}
 	}
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		listShorter;
 	}, [listShorter]);
 

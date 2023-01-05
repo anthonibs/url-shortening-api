@@ -7,24 +7,24 @@ export default createGlobalStyle`
 * {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  text-decoration: none;
-	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
+  text-decoration: none;
 }
 
 body {
-	line-height: 1;
-  height: 100%;
-	font-family: ${props => props.theme.fontFamily};
 	background: ${props => props.theme.background};
 	font-size: 18px;
+	font-family: ${props => props.theme.fontFamily};
+  height: 100%;
+	line-height: 1;
 }
 
 
 body::-webkit-scrollbar {
-	width: 8px;
 	scroll-behavior: smooth;
+	width: 8px;
 }	
 
 body::-webkit-scrollbar-track {
@@ -32,7 +32,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-	background: ${({ theme }) => theme.colors.primary.colorLight};
 	border-radius: 4px;
+	background: ${({ theme }) => theme.colors.primary.colorLight};
 }
 `;

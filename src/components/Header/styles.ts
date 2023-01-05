@@ -10,74 +10,153 @@ const animatedMenu = keyframes`
 `;
 
 export const HeaderContainer = styled.header`
-	width: 100%;
-	height: 70px;
-	position: fixed;
-	background-color: rgba(255, 255, 255, .7);
-  backdrop-filter: blur(2px);
-	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-	z-index: 1000;
+	@media (min-width: 375px) {
+		width: 100%;
+		height: 70px;
+		position: fixed;
+		background-color: ${({ theme }) => theme.backgroundHeader};
+		backdrop-filter: blur(2px);
+		box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+		z-index: 1000;
+		background-color: royalblue;
 
-	/* Animation to decrease the size of the website header */
-	&.collapse-menu {
-		animation: ${animatedMenu} .6s forwards;
-	}
-	
-	.flex {
-		height: 100%;
-		width: 80%;
-		max-width: 1400px;
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		gap: 2rem;
-
-		> a {
-			display: flex;
-			align-items: center;
+		/* Animation to decrease the size of the website header */
+		&.collapse-menu {
+			animation: ${animatedMenu} .6s forwards;
 		}
-
-		.container-links {
-			display: flex;
-			width: 100%;
-			justify-content: space-between;
+		
+		.flex {
+			height: 100%;
+			width: 80%;
+			max-width: 1400px;
+			margin: 0 auto;
+			display: none; /* Corrigir depois */
 			align-items: center;
+			gap: 2rem;
 
-			nav {
+			> a {
 				display: flex;
-				gap: 2rem;
-				height: 100%;
-				width: fit-content;
+				align-items: center;
+			}
+
+			.container-links {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
 				align-items: center;
 
-				a {
-					color: ${({ theme }) => theme.colors.neutral.grayish};
-					font-weight: 500;
-					font-size: 14px;
-					padding: .6rem;
-					transition: color .3s ease-in-out;
-					
-					&:hover {
-						color: ${({ theme }) => theme.colors.neutral.veryBlue};
+				nav {
+					display: flex;
+					gap: 2rem;
+					height: 100%;
+					width: fit-content;
+					align-items: center;
+
+					a {
+						color: ${({ theme }) => theme.colors.neutral.grayish};
+						font-weight: 500;
+						font-size: 14px;
+						padding: .6rem;
+						transition: color .3s ease-in-out;
+						
+						&:hover {
+							color: ${({ theme }) => theme.colors.neutral.veryBlue};
+						}
+					}
+
+					.isActive {
+						color: ${({ theme }) => theme.colors.neutral.veryViolet};
 					}
 				}
 
-				.isActive {
-					color: ${({ theme }) => theme.colors.neutral.veryViolet};
+				.sign {
+					a:first-child {
+						color: ${({ theme }) => theme.colors.neutral.grayish};
+						font-size: 14px;
+						margin-right: 1.6rem;
+						padding: .6rem;
+						font-weight: 500;
+						transition: color .3s ease-in-out;
+
+						&:hover {
+							color: ${({ theme }) => theme.colors.neutral.veryBlue};
+						}
+					}
 				}
 			}
+		}
+	}
 
-			.sign {
-				a:first-child {
-					color: ${({ theme }) => theme.colors.neutral.grayish};
-					font-size: 14px;
-					margin-right: 1.6rem;
-					padding: .6rem;
-					font-weight: 500;
-					transition: color .3s ease-in-out;
+	@media (min-width: 1200px) {
+		width: 100%;
+		height: 70px;
+		position: fixed;
+		background-color: ${({ theme }) => theme.backgroundHeader};
+		backdrop-filter: blur(2px);
+		box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+		z-index: 1000;
 
-					&:hover {
-						color: ${({ theme }) => theme.colors.neutral.veryBlue};
+		/* Animation to decrease the size of the website header */
+		&.collapse-menu {
+			animation: ${animatedMenu} .6s forwards;
+		}
+		
+		.flex {
+			height: 100%;
+			width: 80%;
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+
+			> a {
+				display: flex;
+				align-items: center;
+			}
+
+			.container-links {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				align-items: center;
+
+				nav {
+					display: flex;
+					gap: 2rem;
+					height: 100%;
+					width: fit-content;
+					align-items: center;
+
+					a {
+						color: ${({ theme }) => theme.colors.neutral.grayish};
+						font-weight: 500;
+						font-size: 14px;
+						padding: .6rem;
+						transition: color .3s ease-in-out;
+						
+						&:hover {
+							color: ${({ theme }) => theme.colors.neutral.veryBlue};
+						}
+					}
+
+					.isActive {
+						color: ${({ theme }) => theme.colors.neutral.veryViolet};
+					}
+				}
+
+				.sign {
+					a:first-child {
+						color: ${({ theme }) => theme.colors.neutral.grayish};
+						font-size: 14px;
+						margin-right: 1.6rem;
+						padding: .6rem;
+						font-weight: 500;
+						transition: color .3s ease-in-out;
+
+						&:hover {
+							color: ${({ theme }) => theme.colors.neutral.veryBlue};
+						}
 					}
 				}
 			}

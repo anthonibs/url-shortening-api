@@ -15,7 +15,7 @@ export default function Pricing() {
 				<div className="container">
 					<div>
 						<p>
-							Demo page of working site paths, where it has the route<span>{pathname}</span>.
+							Demo page of working site paths, where it has the route <span>{pathname}</span>.
 						</p>
 						<LinkButton to="/" >
 							Back to top
