@@ -73,7 +73,7 @@ export default function Home() {
 	}
 
 	useEffect(() => {
-		listShorter;
+		listShorter.reverse();
 	}, [listShorter]);
 
 	return (

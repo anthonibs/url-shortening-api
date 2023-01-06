@@ -42,7 +42,7 @@ export const HeaderContainer = styled.header`
 			width: 100%;
 
 			> a {
-				padding: 2rem 1rem;
+				padding: 1.1rem 1.6rem;
 				z-index: 99999;
 			}
 
@@ -127,6 +127,12 @@ export const HeaderContainer = styled.header`
 				z-index: 200;
 			}
 		}
+
+		.background-menu {
+			background-color: ${({theme}) => theme.background};
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+			transition: all .6s linear;
+		}
 	}
 
 	@media (min-width: 767px) {
@@ -134,7 +140,7 @@ export const HeaderContainer = styled.header`
 		.flex {
 
 			> a {
-				padding: 2rem 4rem;
+				padding: 1.1rem 4rem;
 			}
 
 			.container-links {
@@ -233,7 +239,7 @@ export const MenuHamburger = styled.div`
 		justify-content: center;
 		position: fixed;
 		right: 2rem;
-		top: 2rem;
+		top: 1rem;
 		z-index: 99999;
 	}
 	

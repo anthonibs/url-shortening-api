@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import css from "classnames";
+
 import { HeaderContainer, MenuHamburger } from "./styles";
 
 import logo from "../../assets/svg/logo.svg";
@@ -38,7 +40,10 @@ export default function Header() {
 		<HeaderContainer
 			className={pageScrollPositionY >= 100 ? "collapse-menu" : ""}
 		>
-			<div className="flex">
+			<div className={css({
+				["flex"]: true,
+				["background-menu"]: !isOpenMenu && width <= 1000 ? true : false,
+			})}>
 				<Link to={"/"}>
 					<img src={logo} alt="Logo Shortly" />
 				</Link>
@@ -49,9 +54,10 @@ export default function Header() {
 					</MenuHamburger>
 				}
 
-				<div className={`container-links ${isOpenMenu ? "active-menu" : ""}`} >
+				<div className={`container-links ${isOpenMenu ? "active-menu" : ""}`}>
 					{isOpenMenu && width <= 1000
-						&& <span onClick={handleIsOpenMenu}></span>}
+						&& <span onClick={handleIsOpenMenu}></span>
+					}
 
 					<nav>
 						<NavLink to={"/features"} className={({ isActive }) =>
