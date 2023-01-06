@@ -50,6 +50,8 @@ export const Banner = styled.section`
 
 		.container {
 			flex-direction: row;
+			margin: 0;
+			width: 100%;
 
 			.image-background {
 				background: right / contain url(${imageBackgroundBanner}) no-repeat ;
@@ -120,6 +122,10 @@ export const ControlBanner = styled.div`
 			text-align: left;
 		}
 		
+		p {
+			text-align: left;
+		}
+		
 		> div  {
 			margin: 2rem auto 4rem;
 
@@ -155,9 +161,9 @@ export const SectionShorter = styled.section`
 			height: 100%;
 			flex-direction: column;
 			gap: .625rem;
+			list-style: none;
 			max-height: 480px;
 			margin: 0 auto;
-			list-style: none;
 			overflow-y: auto;
 			padding: 0 .625rem .325rem 0;
 			width: 90%;
