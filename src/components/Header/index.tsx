@@ -1,20 +1,29 @@
-import { Link, NavLink } from "react-router-dom";
-import { HeaderContainer } from "./styles";
+import { useEffect, useState } from "react";
+import { HeaderContainer, MenuHamburger } from "./styles";
 
 import logo from "../../assets/svg/logo.svg";
 import LinkButton from "../LinkButton";
-import { useLayoutEffect, useState } from "react";
+
+import { Link, NavLink } from "react-router-dom";
+import { AiOutlineMenu } from "react-icons/ai";
+
 
 export default function Header() {
 
-	const [pageScrollPositionY, setPageScrollPositionY] = useState(0);
+	const [pageScrollPositionY, setPageScrollPositionY] = useState<number>(0);
+	const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+
+	const width = window.innerWidth;
 
 	function getPageYAfterScroll() {
 		setPageScrollPositionY(window.scrollY);
 	}
 
-	useLayoutEffect(() => {
-		const width = window.innerWidth;
+	function handleIsOpenMenu() {
+		setIsOpenMenu(!isOpenMenu);
+	}
+
+	useEffect(() => {
 
 		if (width >= 1000) {
 			window.addEventListener("scroll", getPageYAfterScroll);
@@ -22,8 +31,8 @@ export default function Header() {
 
 		return () => window.removeEventListener("scroll", getPageYAfterScroll);
 
-	}, []);
-	
+	}, [width]);
+
 
 	return (
 		<HeaderContainer
@@ -34,7 +43,16 @@ export default function Header() {
 					<img src={logo} alt="Logo Shortly" />
 				</Link>
 
-				<div className="container-links">
+				{width <= 1000
+					&& <MenuHamburger onClick={handleIsOpenMenu}>
+						<AiOutlineMenu size={34} />
+					</MenuHamburger>
+				}
+
+				<div className={`container-links ${isOpenMenu ? "active-menu" : ""}`} >
+					{isOpenMenu && width <= 1000
+						&& <span onClick={handleIsOpenMenu}></span>}
+
 					<nav>
 						<NavLink to={"/features"} className={({ isActive }) =>
 							isActive ? "isActive" : ""
