@@ -1,96 +1,67 @@
-# Frontend Mentor - Shortly URL shortening API Challenge
+![Captura-de-tela-de-2023-01-06-00-12-45.png](https://i.postimg.cc/4yJVRjsC/Captura-de-tela-de-2023-01-06-00-12-45.png)
 
-![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/anthonibs/url-shortening-api?color=green) ![GitHub repo size](https://img.shields.io/github/repo-size/anthonibs/url-shortening-api?color=green) ![GitHub Repo stars](https://img.shields.io/github/stars/anthonibs/url-shortening-api?color=green) ![GitHub top language](https://img.shields.io/github/languages/top/anthonibs/url-shortening-api?color=green)
 
-## Welcome! 👋
+## 🎓 Objetivos 
 
-Thanks for checking out this front-end coding challenge.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+Desafio [Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G/hub) que é desenvolver um site de encurtador de URL base shrtco.de/ de forma gratuita e fácil de lembrar.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## 🔗 Acesso a demonstração do projeto
 
-## The challenge
+URL do site ao vivo: [demonstração do site](https://url-shortening-api-mocha.vercel.app/) ou [baixá-lo](https://github.com/anthonibs/url-shortening-api/archive/refs/heads/main.zip).
 
-Your challenge is to build out this landing page, integrate with the [shrtcode API](https://app.shrtco.de/) and get it looking as close to the design as possible.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## 🧑‍💻 Tecnologias
 
-Your users should be able to:
+### Construído com:
 
-- View the optimal layout for the site depending on their device's screen size
-- Shorten any valid URL
-- See a list of their shortened links, even after refreshing the browser
-- Copy the shortened link to their clipboard in a single click
-- Receive an error message when the `form` is submitted if:
-  - The `input` field is empty
+- Marcação HTML5 semântica;
+- Propriedades personalizadas do CSS;
+- Flexbox;
+- CSS Grid;
+- Mobile, Tablet, Desktop;
+-  Typescript;
+- [React](https://reactjs.org/) - JS biblioteca;
+- [Styled Components](https://styled-components.com/) - Para estilização CSS;
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-## Where to find everything
+ **Usuários devem ser capazes de:**
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Visualize o layout ideal para o site, dependendo do tamanho da tela do dispositivo;
+- Navegar pelo site;
+- Página não encontrada;
+- Encurte qualquer URL válido;
+- Veja uma lista de seus links encurtados, mesmo depois de atualizar o navegador
+- Copie o link encurtado para a área de transferência com um único clique;
+- Receba uma mensagem de erro quando o `formulário` for enviado se:  ***o campo de entrada está vazio ou url inválida***;
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## 🖥️ Para dispositivos Mobile, Tablets e Desktops
+**Mobile *(width: 375px):***
+![enter image description here](https://i.postimg.cc/DfcbX19x/Captura-de-tela-de-2023-01-06-01-04-03.png)  ![enter image description here](https://i.postimg.cc/Dyy4d8Fn/Captura-de-tela-de-2023-01-06-01-04-12.png)
+![enter image description here](https://i.postimg.cc/NfJ9NBfT/Captura-de-tela-de-2023-01-06-01-04-32.png) [![Captura-de-tela-de-2023-01-06-01-08-17.png](https://i.postimg.cc/T3TxWDXJ/Captura-de-tela-de-2023-01-06-01-08-17.png)](https://postimg.cc/dLNpbD3h) 
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+**Tablet *(width: 767px):***
+![enter image description here](https://i.postimg.cc/yY841zhL/Captura-de-tela-de-2023-01-06-01-21-28.png)
+![enter image description here](https://i.postimg.cc/jd3VCkZt/Captura-de-tela-de-2023-01-06-01-21-50.png)
+![enter image description here](https://i.postimg.cc/K816TrHL/Captura-de-tela-de-2023-01-06-01-22-05.png)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+**Desktop *(width: 1200px):***
+![enter image description here](https://i.postimg.cc/cCsH15Tf/Captura-de-tela-de-2023-01-06-01-29-16.png)
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+![enter image description here](https://i.postimg.cc/vB7Tsd7Q/Captura-de-tela-de-2023-01-06-01-29-56.png)
 
-## Building your project
+![enter image description here](https://i.postimg.cc/BvKtmFXP/Captura-de-tela-de-2023-01-06-01-31-49.png)
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+## ☕ Seja um dos contribuidores
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+Quer fazer parte desse projeto? Clique [AQUI](https://github.com/anthonibs/url-shortening-api/blob/main/CONTRIBUTING.md) e leia como contribuir.
 
-## Deploying your project
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+## ✅ Licença
+Esse projeto está sob licença. Veja o arquivo [MIT](https://github.com/anthonibs/url-shortening-api/blob/main/LICENSE) para mais detalhes.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+## ✏️  Autores
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+ | | [<img src="https://avatars.githubusercontent.com/u/77931577?v=4" width=115><br><sub>Anthoni Broering dos Santos</sub>](https://github.com/anthonibs) | |
+|:---:|:---: |:---: |
