@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-interface ILink {
-	fontSize?: string;
-}
 
-export const LinkCustom = styled(Link)<ILink>`
+export const LinkCustom = styled(Link)`
 	background-color: ${({ theme }) => theme.colors.primary.colorLight};
 	color: ${({ theme }) => theme.colors.white};
-	font-size: ${({ fontSize }) => fontSize};
 	padding: .625rem 1.6rem;
 	border-radius: 100px;
 	font-weight: 700;

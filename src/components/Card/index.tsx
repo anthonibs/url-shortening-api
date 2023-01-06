@@ -10,9 +10,9 @@ interface ICardProps {
 export default function Card({ title, description, svg }: ICardProps) {
 	return (
 		<CardArticle>
-			<div>
+			<figure>
 				<img src={svg} alt={title} />
-			</div>
+			</figure>
 
 			<h3>{title}</h3>
 

@@ -93,10 +93,13 @@ export const HeaderContainer = styled.header`
 					flex-direction: row;
 					margin-top: 5rem;
 					order: 1;
+
+					a {
+						font-size: .825rem;
+					}
 					
 					a:first-child {
 						color: ${({ theme }) => theme.colors.neutral.grayish};
-						font-size: 14px;
 						font-family: ${({ theme }) => theme.fontFamily};
 						font-weight: 500;
 						padding: .6rem;
@@ -201,6 +204,7 @@ export const HeaderContainer = styled.header`
 					flex-direction: row;
 					gap: 2rem;
 					margin-top: 0rem;
+					margin-right: 2rem;
 
 					a {
 						font-size: 16px;
@@ -211,9 +215,13 @@ export const HeaderContainer = styled.header`
 				.sign {
 					margin-top: 0rem;
 
+					a {
+						font-size: 1rem;
+					}
+
 					a:first-child {
 						font-size: 16px;
-						margin-right: 1.6rem;
+						margin-right: 1rem;
 
 						&:hover {
 							color: ${({ theme }) => theme.colors.neutral.veryBlue};

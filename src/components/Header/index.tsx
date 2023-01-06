@@ -80,11 +80,11 @@ export default function Header() {
 					</nav>
 
 					<div className="sign">
-						<Link to={"#"}>
+						<Link to={"#"} >
 							Login
 						</Link>
 
-						<LinkButton to={"#"} fontSize="14px">
+						<LinkButton to={"#"}>
 							Sign Up
 						</LinkButton>
 					</div>

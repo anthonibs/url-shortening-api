@@ -1,7 +1,7 @@
 import { FooterContainer } from "./styles";
 import { Link } from "react-router-dom";
 
-import logo from "../../assets/svg/logo.svg";
+import logoWhite from "../../assets/svg/logo-white.svg";
 
 import { ReactComponent as Facebook } from "../../assets/svg/icon-facebook.svg";
 import { ReactComponent as Twitter } from "../../assets/svg/icon-twitter.svg";
@@ -13,15 +13,15 @@ export default function Footer() {
 	return (
 		<FooterContainer>
 			<div className="container">
-				<div className="logo-footer">
-					<img id="logo" src={logo} alt="Logo do site Shortly" />
-				</div>
+				<figure className="logo-footer">
+					<img id="logo" src={logoWhite} alt="Logo do site Shortly" />
+				</figure>
 
 				<div className="wrap">
 					<div className="group-links">
-						<header className="title-link">
+						<h3 className="title-link">
 							Features
-						</header>
+						</h3>
 						<ul>
 							<li>
 								<Link to={"#"}>
@@ -41,9 +41,9 @@ export default function Footer() {
 					</div>
 
 					<div className="group-links">
-						<header className="title-link">
+						<h3 className="title-link">
 							Resources
-						</header>
+						</h3>
 						<ul>
 							<li>
 								<Link to={"#"}>
@@ -63,9 +63,9 @@ export default function Footer() {
 					</div>
 
 					<div className="group-links">
-						<header className="title-link">
+						<h3 className="title-link">
 							Company
-						</header>
+						</h3>
 						<ul>
 							<li>
 								<Link to={"#"}>

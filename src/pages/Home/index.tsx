@@ -156,9 +156,9 @@ export default function Home() {
 			</SectionCustom>
 
 			<BannerFooter>
-				<h3>
+				<h2>
 					Boost your links today
-				</h3>
+				</h2>
 				<LinkButton to="#">
 					Get Started
 				</LinkButton>

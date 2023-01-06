@@ -35,6 +35,7 @@ export const FooterContainer = styled.footer`
 					color: ${({ theme }) => theme.colors.white};
 					font-family: ${({ theme }) => theme.fontFamily};
 					font-weight: 700;
+					font-size: 1rem;
 					margin-bottom: 1rem;
 				}
 				

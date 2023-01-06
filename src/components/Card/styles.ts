@@ -9,7 +9,7 @@ export const CardArticle = styled.article`
 		position: relative;
 		width: fit-content;
 
-		> div {
+		> figure {
 			background-color: ${({ theme }) => theme.colors.primary.colorDark};
 			border-radius:  50px;
 			height: 60px;

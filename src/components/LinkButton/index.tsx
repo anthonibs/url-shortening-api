@@ -4,13 +4,12 @@ import { LinkCustom } from "./styles";
 interface ILinkButtonProps {
 	to: string;
 	children: ReactElement | string;
-	fontSize?: string;
 }
 
 
-export default function LinkButton({ to, children, fontSize = "18px" }: ILinkButtonProps) {
+export default function LinkButton({ to, children }: ILinkButtonProps) {
 	return (
-		<LinkCustom to={to} fontSize={fontSize}>
+		<LinkCustom to={to}>
 			{children}
 		</LinkCustom>
 	);

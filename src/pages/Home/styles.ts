@@ -132,6 +132,7 @@ export const ControlBanner = styled.div`
 			a {
 				display: block;
 				margin-left: 0;
+				font-size: 1.325rem;
 			}
 		}
 	}
@@ -374,7 +375,7 @@ export const BannerFooter = styled.section`
 		justify-content: center;
 		padding: 3rem 0;
 		
-		h3 {
+		h2 {
 			color: ${({ theme }) => theme.colors.white};
 			font-size: 1.3rem;
 			font-family: ${({ theme }) => theme.fontFamily};
@@ -390,7 +391,7 @@ export const BannerFooter = styled.section`
 		background:  center / cover url(${backgroundBannerFooterDesktop}) no-repeat ${({ theme }) => theme.colors.neutral.veryBlue};
 		padding: 5rem 0;
 
-		h3 {
+		h2 {
 			font-size: 2rem;
 		}
 
@@ -400,7 +401,7 @@ export const BannerFooter = styled.section`
 	}
 
 	@media (min-width: 1000px) {
-		h3 {
+		h2 {
 			font-size: 2.3rem;
 		}
 
